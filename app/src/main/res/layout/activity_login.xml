@@ -18,11 +18,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
             android:gravity="end"
             android:text="HEALTH\n CALC"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:fontFamily="sans-serif-black"/>
+            android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/iv"
@@ -50,29 +50,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
+            android:fontFamily="sans-serif-black"
             android:text="Login"
-            android:textSize="40sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="40sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:text="Faça login para continuar"
-            android:textSize="20sp"
-            android:textColor="@color/black"/>
+            android:textSize="15sp" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/forma_edit_text"
             android:drawableStart="@drawable/email"
-            android:hint="E-mail"/>
+            android:hint="E-mail" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/forma_edit_text"
             android:drawableStart="@drawable/cadeado"
@@ -82,9 +82,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:background="#e7008a"
             android:text="ENTRAR"
-            android:textColor="@color/white"
-            android:background="#e7008a"/>
+            android:textColor="@color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -95,7 +95,8 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end" />
+                android:layout_gravity="end"
+                android:text="Lembrar-me" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -107,7 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:text="Não tem uma conta? Criar uma conta" />
+                android:text="Não tem uma conta? Criar uma conta agora" />
 
         </LinearLayout>
 
@@ -125,7 +126,7 @@
     <ImageView
         android:id="@+id/iv_bottom"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="108dp"
         android:layout_alignParentBottom="true"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_wave_bottom" />
@@ -136,7 +137,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:text="Desenvolvido por DSM"
+        android:text="Desenvolvido por DS2M"
         android:textColor="@color/black" />
 
 
