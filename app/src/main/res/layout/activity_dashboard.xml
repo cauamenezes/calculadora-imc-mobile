@@ -18,7 +18,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:cardBackgroundColor="@color/black"
             app:cardCornerRadius="60dp">
 
@@ -37,6 +37,8 @@
             android:gravity="center"
             android:text="Rodrigo Constantino"
             android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
@@ -46,12 +48,15 @@
             android:gravity="center"
             android:text="Jornalista"
             android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
             android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -68,7 +73,9 @@
                     android:layout_height="match_parent"
                     android:text="25.7"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -93,6 +100,8 @@
                     android:layout_height="match_parent"
                     android:text="1980"
                     android:textColor="@color/white"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
                     android:textSize="20sp" />
 
                 <TextView
@@ -118,6 +127,8 @@
                     android:layout_height="match_parent"
                     android:text="46"
                     android:textColor="@color/white"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
                     android:textSize="20sp" />
 
                 <TextView
@@ -143,6 +154,8 @@
                     android:layout_height="match_parent"
                     android:text="70,5"
                     android:textColor="@color/white"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
                     android:textSize="20sp" />
 
                 <TextView
@@ -168,6 +181,8 @@
                     android:layout_height="match_parent"
                     android:text="1,76"
                     android:textColor="@color/white"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
                     android:textSize="20sp" />
 
                 <TextView
@@ -181,38 +196,116 @@
 
         </LinearLayout>
 
-
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_top"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
 
-            <androidx.cardview.widget.CardView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center">
 
-            </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/balanca"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:src="@drawable/balanca" />
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/balanca"
+                    android:orientation="vertical">
 
-        <LinearLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Pesar agora"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acompanhe o seu peso."
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_top"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
 
-            <androidx.cardview.widget.CardView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center">
 
-            </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/grafico"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:src="@drawable/growth" />
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/grafico"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Ver histórico"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reveja suas conquistas."
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
 
