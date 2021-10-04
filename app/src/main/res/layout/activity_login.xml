@@ -102,13 +102,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:text="Esqueci a senha" />
+                android:textStyle="bold"
+                android:text="Esqueci a senha"
+                android:textColor="#3496AD" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="Não tem uma conta? Criar uma conta agora" />
+                android:gravity="end"
+                android:layout_marginTop="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não tem uma conta?" />
+
+                <TextView
+                    android:id="@+id/tv_nova_conta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#3496AD"
+                    android:textStyle="bold"
+                    android:text=" Criar uma conta agora" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
