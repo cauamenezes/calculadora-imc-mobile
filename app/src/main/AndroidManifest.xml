@@ -9,9 +9,7 @@
         android:roundIcon="@drawable/kcal"
         android:supportsRtl="true"
         android:theme="@style/Theme.RelativeLayout">
-        <activity android:name=".DashboardActivity">
-
-        </activity>
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".NovoUsuarioActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

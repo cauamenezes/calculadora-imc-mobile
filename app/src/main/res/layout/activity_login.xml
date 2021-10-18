@@ -76,7 +76,9 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/forma_edit_text"
             android:drawableStart="@drawable/cadeado"
-            android:hint="Senha" />
+            android:hint="Senha"
+            android:inputType="textPassword"
+            app:passwordToggleEnabled="true" />
 
         <Button
             android:layout_width="match_parent"

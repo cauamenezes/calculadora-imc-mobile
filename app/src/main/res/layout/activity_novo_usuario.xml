@@ -43,39 +43,127 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:hint="Nome"
-                android:paddingBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:drawableStart="@drawable/cadeado"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/purple_200"
+                android:hint="Dados para autenticação"
                 android:textSize="20sp" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:hint="Profissão"
-                android:paddingBottom="20dp"
-                android:textSize="20sp" />
+                android:layout_height="match_parent"
+                app:endIconMode="clear_text">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:hint="Altura"
-                android:paddingBottom="20dp"
-                android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:hint="E-mail"
+                    android:paddingBottom="20dp" />
 
-            <EditText
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:hint="Data de nascimento"
-                android:paddingBottom="20dp"
-                android:textSize="20sp" />
+                android:layout_height="match_parent"
+                app:endIconMode="clear_text">
+
+                <EditText
+                    android:id="@+id/editSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Senha"
+                    android:inputType="textPassword"
+                    android:paddingBottom="20dp"
+                    app:passwordToggleEnabled="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:drawableStart="@drawable/person_24"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/purple_200"
+                android:hint="Dados pessoais" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="clear_text">
+
+                <EditText
+                    android:id="@+id/editNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Nome"
+                    android:paddingBottom="20dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="clear_text">
+
+                <EditText
+                    android:id="@+id/editProfissao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Profissão"
+                    android:paddingBottom="20dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="clear_text">
+
+                <EditText
+                    android:id="@+id/editAltura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Altura"
+                    android:inputType="numberDecimal"
+                    android:paddingBottom="20dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="clear_text">
+
+                <EditText
+                    android:id="@+id/et_data_nascimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:hint="Data de nascimento"
+                    android:paddingBottom="20dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_sexo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -83,22 +171,23 @@
                 android:textSize="20sp" />
 
             <RadioGroup
+                android:id="@+id/radio_group_sexo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radio_button_feminino"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:hint="Feminino"
-                    android:textSize="20sp" />
+                    android:hint="Feminino" />
 
                 <RadioButton
+                    android:id="@+id/radio_button_masculino"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:hint="Masculino"
-                    android:textSize="20sp" />
+                    android:hint="Masculino" />
 
             </RadioGroup>
 

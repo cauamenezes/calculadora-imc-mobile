@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar!!.hide()
+
         Log.i("LIFE_CYCLE","OnCreate")
 
         val buttonOk = findViewById<Button>(R.id.button_ok)
