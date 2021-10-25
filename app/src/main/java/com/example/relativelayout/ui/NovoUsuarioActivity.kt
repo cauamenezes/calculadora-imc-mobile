@@ -1,6 +1,7 @@
-package com.example.relativelayout
+package com.example.relativelayout.ui
 
 import android.app.DatePickerDialog
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -9,6 +10,10 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
+import com.example.relativelayout.R
+import com.example.relativelayout.model.Usuario
+import com.example.relativelayout.utils.convertStringToLocalDate
+import java.time.LocalDate
 import java.util.*
 
 class NovoUsuarioActivity : AppCompatActivity() {
@@ -18,7 +23,7 @@ class NovoUsuarioActivity : AppCompatActivity() {
     lateinit var editNome: EditText
     lateinit var editProfissao: EditText
     lateinit var editAltura: EditText
-    lateinit var et_data_nascimento: EditText
+    lateinit var editDataNascimento: EditText
     lateinit var radio_button_feminino: RadioButton
     lateinit var radio_button_masculino: RadioButton
     lateinit var tv_sexo: TextView
@@ -32,7 +37,7 @@ class NovoUsuarioActivity : AppCompatActivity() {
         editNome = findViewById<EditText>(R.id.editNome)
         editProfissao = findViewById<EditText>(R.id.editProfissao)
         editAltura = findViewById<EditText>(R.id.editAltura)
-        et_data_nascimento = findViewById<EditText>(R.id.et_data_nascimento)
+        editDataNascimento = findViewById<EditText>(R.id.editDataNascimento)
         radio_button_feminino = findViewById<RadioButton>(R.id.radio_button_feminino)
         radio_button_masculino = findViewById<RadioButton>(R.id.radio_button_masculino)
         tv_sexo = findViewById<TextView>(R.id.tv_sexo)
@@ -48,7 +53,7 @@ class NovoUsuarioActivity : AppCompatActivity() {
         val dia = calendario.get(Calendar.DAY_OF_MONTH)
 
         // Abrir o componente DatePicker
-        val etDataNascimento = findViewById<EditText>(R.id.et_data_nascimento)
+        val etDataNascimento = findViewById<EditText>(R.id.editDataNascimento)
 
         etDataNascimento.setOnClickListener {
             val dp = DatePickerDialog(
@@ -81,7 +86,56 @@ class NovoUsuarioActivity : AppCompatActivity() {
 
         }
 
-        validarCampos()
+        if (validarCampos()) {
+            //Criar o objeto usuario
+            val dataNascimento = convertStringToLocalDate(editDataNascimento.text.toString())
+
+            val usuario = Usuario(
+                1,
+                editNome.text.toString(),
+                editEmail.text.toString(),
+                editSenha.text.toString(),
+                0,
+                editAltura.text.toString().toDouble(),
+                LocalDate.of(
+                    dataNascimento.year,
+                    dataNascimento.monthValue,
+                    dataNascimento.dayOfMonth
+                ),
+                editProfissao.text.toString(),
+                if (radio_button_feminino.isChecked){
+                    'F'
+                } else{
+                    'M'
+                }
+            )
+
+                //Salvar o registro
+                //Em um SharedPreferences
+
+                //A instrução abaixo irá criar um
+                //Arquivo SharedPreferences se não existir
+                // Se existir ele será aberto para edição
+                val dados = getSharedPreferences (
+                    "usuario", Context.MODE_PRIVATE)
+
+            //vamos criar o objeto que permitirá a
+            //edição dos dados do arquivo SharedPreferences
+            val editor = dados.edit()
+            editor.putInt("id", usuario.id)
+            editor.putString("nome", usuario.nome)
+            editor.putString("email", usuario.senha)
+            editor.putString("senha", usuario.senha)
+            editor.putInt("peso", usuario.peso)
+            editor.putFloat("altura", usuario.altura.toFloat())
+            editor.putString("dataNascimento", usuario.dataNascimento.toString())
+            editor.putString("profissao", usuario.profissao)
+            editor.putString("sexo", usuario.sexo.toString())
+            editor.apply()
+        }
+
+        Toast.makeText(this, "Usuário cadaastrado!", Toast.LENGTH_SHORT).show()
+
 
         return true
 
@@ -114,8 +168,8 @@ class NovoUsuarioActivity : AppCompatActivity() {
             return false
         }
 
-        if (et_data_nascimento.text.isEmpty()) {
-            et_data_nascimento.error = "A data de nascimento é obrigatória"
+        if (editDataNascimento.text.isEmpty()) {
+            editDataNascimento.error = "A data de nascimento é obrigatória"
             return false
         }
 

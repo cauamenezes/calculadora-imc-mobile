@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     android:padding="30dp"
-    tools:context=".NovoUsuarioActivity">
+    tools:context=".ui.NovoUsuarioActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -151,7 +151,7 @@
                 app:endIconMode="clear_text">
 
                 <EditText
-                    android:id="@+id/et_data_nascimento"
+                    android:id="@+id/editDataNascimento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"

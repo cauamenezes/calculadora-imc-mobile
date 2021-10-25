@@ -1,11 +1,11 @@
-package com.example.relativelayout
+package com.example.relativelayout.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+import com.example.relativelayout.R
 
 class MainActivity : AppCompatActivity() {
     lateinit var editNome: EditText

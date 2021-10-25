@@ -1,9 +1,10 @@
-package com.example.relativelayout
+package com.example.relativelayout.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.relativelayout.R
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,9 +15,10 @@ class LoginActivity : AppCompatActivity() {
 
         val tvNovaConta = findViewById<TextView>(R.id.tv_nova_conta)
 
-//        tvNovaConta.setOnClickListener {
-//            val novaConta = Intent(this, NovoUsuarioActivity)
-//            startActivity(novaConta)
-//        }
+        tvNovaConta.setOnClickListener {
+            val novaConta = Intent(this, NovoUsuarioActivity::class.java)
+            startActivity(novaConta)
+        }
+
     }
 }
