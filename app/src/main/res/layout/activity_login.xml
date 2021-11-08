@@ -63,6 +63,7 @@
             android:textSize="15sp" />
 
         <EditText
+            android:id="@+id/edit_login_email"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="20dp"
@@ -71,6 +72,7 @@
             android:hint="E-mail" />
 
         <EditText
+            android:id="@+id/edit_login_senha"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="20dp"
@@ -81,6 +83,7 @@
             app:passwordToggleEnabled="true" />
 
         <Button
+            android:id="@+id/button_entrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
