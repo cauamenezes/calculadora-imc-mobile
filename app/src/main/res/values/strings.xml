@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">RelativeLayout</string>
+
+    <string-array name="niveis">
+        <item>Atividade leve</item>
+        <item>Atividade moderada</item>
+        <item>Atividade intensa</item>
+    </string-array>
 </resources>

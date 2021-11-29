@@ -22,17 +22,12 @@ class DashboardActivity : AppCompatActivity() {
     lateinit var tvIdade: TextView
     lateinit var tvAltura: TextView
     lateinit var ivPerfil: ImageView
-    lateinit var buttonPesagem : RelativeLayout
+    lateinit var cvNovoPeso : CardView
+    lateinit var cvHistorico : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
-
-        buttonPesagem = findViewById<RelativeLayout>(R.id.button_pesagem)
-
-        buttonPesagem.setOnClickListener {
-            val pesagem = Intent(this, PesoActivity::class.java)
-            startActivity(pesagem)
 
             tvNome = findViewById(R.id.tv_dash_nome)
             tvProfissao = findViewById(R.id.tv_dash_profissao)
@@ -42,12 +37,18 @@ class DashboardActivity : AppCompatActivity() {
             tvIdade = findViewById(R.id.tv_dash_idade)
             tvAltura = findViewById(R.id.tv_dash_altura)
             ivPerfil = findViewById(R.id.iv_dash_foto_perfil)
+            cvNovoPeso = findViewById(R.id.cv_novo_peso)
 
             supportActionBar!!.hide()
 
             carregarDashboard()
 
-        }
+            cvNovoPeso = findViewById(R.id.cv_novo_peso)
+
+            cvNovoPeso.setOnClickListener {
+                val pesagem = Intent(this, PesoActivity::class.java)
+                startActivity(pesagem)
+            }
 
     }
 

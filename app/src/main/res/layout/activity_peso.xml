@@ -7,14 +7,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.PesoActivity"
-    android:layout_margin="30dp">
+    android:layout_margin="25dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="60dp"
+        android:layout_gravity="end">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/perfil1"
+            android:scaleType="centerCrop"/>
+
+
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/pesar"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="0dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -25,6 +39,7 @@
         android:textSize="24sp"/>
 
     <LinearLayout
+        android:id="@+id/ln_texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -39,19 +54,82 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/montserrat"
             />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
 
         </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_acessibility"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dados da sua pesagem"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/purple_200"/>
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Data da pesagem"/>
+
+        <TextView
+            android:id="@+id/tv_data_pesagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="29/11/2021"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginTop="5dp"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nível de atividade:"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_atividade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/niveis"/>
+
+    <TextView
+        android:id="@+id/et_novo_peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seu novo peso:"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/et_peso"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/button_registrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="12sp"
+        android:text="REGISTRAR PESO" />
 
 </LinearLayout>

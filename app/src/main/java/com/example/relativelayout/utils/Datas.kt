@@ -32,3 +32,17 @@ fun calcularIdade(dataNascimento : String) : Int {
     return idade
 
 }
+
+//fun getDataAtualBrasil() : String {
+//
+//    val hoje = LocalDate.now() //2021-11-29
+//
+//    val formatter
+//
+//
+//    return ""
+//}
+//
+//fun converterLocalDateEmDataBrasil() {
+//
+//}
