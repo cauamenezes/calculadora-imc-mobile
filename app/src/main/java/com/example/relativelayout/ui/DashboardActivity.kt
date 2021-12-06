@@ -3,12 +3,12 @@ package com.example.relativelayout.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
+import android.util.Log
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.example.relativelayout.R
+import com.example.relativelayout.repository.PesagemRepository
 import com.example.relativelayout.utils.calcularIdade
 import com.example.relativelayout.utils.convertBase64ToBitmap
 
@@ -22,8 +22,8 @@ class DashboardActivity : AppCompatActivity() {
     lateinit var tvIdade: TextView
     lateinit var tvAltura: TextView
     lateinit var ivPerfil: ImageView
-    lateinit var cvNovoPeso : CardView
-    lateinit var cvHistorico : CardView
+    lateinit var cardNovoPeso : CardView
+    lateinit var cardHistorico : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,17 +37,23 @@ class DashboardActivity : AppCompatActivity() {
             tvIdade = findViewById(R.id.tv_dash_idade)
             tvAltura = findViewById(R.id.tv_dash_altura)
             ivPerfil = findViewById(R.id.iv_dash_foto_perfil)
-            cvNovoPeso = findViewById(R.id.cv_novo_peso)
+            cardNovoPeso = findViewById(R.id.card_novo_peso)
+            cardHistorico = findViewById(R.id.card_historico)
 
             supportActionBar!!.hide()
 
             carregarDashboard()
 
-            cvNovoPeso = findViewById(R.id.cv_novo_peso)
+            cardNovoPeso = findViewById(R.id.card_novo_peso)
 
-            cvNovoPeso.setOnClickListener {
+            cardNovoPeso.setOnClickListener {
                 val pesagem = Intent(this, PesoActivity::class.java)
                 startActivity(pesagem)
+            }
+
+            cardHistorico.setOnClickListener {
+                val intent = Intent(this, HistoricoActivity::class.java)
+                startActivity(intent)
             }
 
     }

@@ -211,7 +211,7 @@
         android:layout_marginTop="40dp">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_novo_peso"
+            android:id="@+id/card_novo_peso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="20dp"
@@ -263,10 +263,10 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_historico"
+            android:id="@+id/card_historico"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/cv_novo_peso"
+            android:layout_below="@id/card_novo_peso"
             app:cardCornerRadius="20dp"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"

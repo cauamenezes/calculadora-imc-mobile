@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.HistoricoActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_historico"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/lista_pesagem_layout"
+        app:layout_constraintTop_toBottomOf="@id/header_perfil"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/purple_700"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

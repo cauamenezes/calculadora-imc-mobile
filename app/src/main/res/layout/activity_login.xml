@@ -69,6 +69,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/forma_edit_text"
             android:drawableStart="@drawable/email"
+            android:drawablePadding="10dp"
             android:hint="E-mail" />
 
         <EditText
@@ -78,6 +79,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/forma_edit_text"
             android:drawableStart="@drawable/cadeado"
+            android:drawablePadding="10dp"
             android:hint="Senha"
             android:inputType="textPassword"
             app:passwordToggleEnabled="true" />

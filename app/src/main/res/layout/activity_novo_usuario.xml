@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Trocar foto"
-                android:textColor="@color/purple_200"
+                android:textColor="@color/pink_200"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
                 android:layout_marginTop="30dp"
                 android:drawableStart="@drawable/cadeado"
                 android:drawablePadding="8dp"
-                android:drawableTint="@color/purple_200"
+                android:drawableTint="@color/pink_200"
                 android:hint="Dados para autenticação"
                 android:textSize="20sp" />
 
@@ -94,7 +94,7 @@
                 android:layout_marginTop="15dp"
                 android:drawableStart="@drawable/person_24"
                 android:drawablePadding="8dp"
-                android:drawableTint="@color/purple_200"
+                android:drawableTint="@color/pink_200"
                 android:hint="Dados pessoais" />
 
             <com.google.android.material.textfield.TextInputLayout
